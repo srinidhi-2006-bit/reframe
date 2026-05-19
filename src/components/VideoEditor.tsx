@@ -79,7 +79,22 @@ export default function VideoEditor() {
               <FileUpload onFileSelect={handleFileSelect} currentFile={file} />
               {file && (
                 <div className="mt-4 animate-fade-in">
+
                   <VideoPreview file={file} />
+
+                  <VideoPreview file={file} recipe={recipe} videoRef={videoRef} />
+
+                  <div className="mt-3">
+                    <ThumbnailStrip
+                      videoSrc={videoSrc}
+                      duration={duration}
+                      currentTime={videoRef.current?.currentTime ?? 0}
+                      trimStart={recipe.trimStart ?? 0}
+                      trimEnd={recipe.trimEnd ?? duration}
+                      onSeek={seekTo}
+                    />
+                  </div>
+
                 </div>
               )}
             </div>
