@@ -1,5 +1,6 @@
 import VideoEditor from "@/components/VideoEditor";
-import Footer from "@/components/Footer"; 
+import Footer from "@/components/Footer";
+import PrivacyBanner from "@/components/PrivacyBanner";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       </a>
 
       <main id="main-content" tabIndex={-1}>
+        <PrivacyBanner />
         <VideoEditor />
       </main>
 
@@ -20,4 +22,4 @@ export default function Home() {
     </>
   );
 }
-    
+
