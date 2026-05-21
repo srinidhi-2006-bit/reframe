@@ -7,6 +7,10 @@ interface Props {
   file: File | null;
   videoRef: RefObject<HTMLVideoElement | null>;
   recipe: EditRecipe;
+  overlayFile?: File | null;
+  overlayPosition?: string;
+  overlaySize?: number;
+  overlayOpacity?: number;
 }
 
 export default function VideoPreview({ file, videoRef ,recipe }: Props) {
