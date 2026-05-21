@@ -1,5 +1,6 @@
 import VideoEditor from "@/components/VideoEditor";
 import Footer from "@/components/Footer"; 
+import PrivacyBanner from "@/components/PrivacyBanner";
 
 export default function Home() {
   return (
