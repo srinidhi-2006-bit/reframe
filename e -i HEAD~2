@@ -1,0 +1,209 @@
+[33mda86bd2[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeat/custom-presets[m[33m, [m[1;31morigin/feat/custom-presets[m[33m)[m feat: add custom preset support
+[33m034a64a[m[33m ([m[1;32mmain[m[33m)[m feat: add dismissible privacy banner
+[33mf3b7ebe[m[33m ([m[1;31mupstream/main[m[33m)[m fix: remove duplicate file format text in upload area (#777)
+[33mfc2b628[m feat: export file size estimation (#744)
+[33mc4e3d76[m fixed the inverted slider (#749)
+[33me9e2fc7[m feat(shortcut): add M key to toggle audio mute (#173) (#751)
+[33ma4201a1[m fix(mobile): ensure export button is full-width with 44px touch target (#57) (#772)
+[33m7167080[m fix(ui): hide number input spinners to prevent value visibility overlap (#776) (#778)
+[33md36ae7f[m Feat/title highlight box 775 (#780)
+[33m6577296[m nvda screen reader testing (#785)
+[33mf8e0f12[m feat: add asynchronous audio waveform canvas rendering to trim timeline (#794)
+[33m9af2dab[m feat/shareable-settings-url (#799)
+[33md4eabaf[m Enhanced navigation hover animations (#801)
+[33m1afb79c[m feat: audio normalization (#761)
+[33m07a6084[m feat: implement high-quality GIF export using two-pass FFmpeg pipeline (#724)
+[33m38ab0f4[m feat: add audio waveform trim visualization (#380)
+[33m056eefe[m feat: show ffmpeg engine download progress (#381)
+[33maf76141[m feat: export preview frame as png (#725)
+[33m09af95c[m feat: integrate ffmpeg deshake filter for video stabilization (#695)
+[33m8bd0f91[m fix: prevent video preview panel overflow by adding min-w-0 to grid column\n\n- Ensures video preview scales down to fit within its container\n- Keeps editor UI inside viewport regardless of uploaded video resolution\n- Fixes layout overflow caused by large video intrinsic sizes (#652)
+[33m7274e01[m docs: require screen recordings for UI/feature PRs (#651)
+[33m0b710cb[m feat: editor onboarding tour — 4-step spotlight guide for first-time users (#689)
+[33m5d4f7ca[m feat: add formatted video and clip duration display (#690)
+[33m8d3ae74[m feat: add frame grab PNG export for video preview (#691)
+[33m343c1e2[m feat: implement auto-detect preset suggestion locally (#692)
+[33ma18c844[m fix: resolve video title text invisibility on dark background (#647)
+[33m8de98e8[m feat: implement auto-detect preset suggestion locally (#641)
+[33m63190c7[m feat(video): add floating resolution badge to preview (#305)
+[33m667e3e7[m feat: add multi preset batch export support (#455)
+[33mdf08eae[m feat: add premium animated tips and facts carousel to export overlay (#635)
+[33m2e5300f[m Updated: navbar, Footer, customized scrollbar (#428)
+[33mba8cf99[m Feat/export size estimation clean (#446)
+[33m701af32[m fix: improve visibility and contrast of EXPORT button in light mode (#467) (#511)
+[33m44c62c1[m  Fix output size card alignment (#442)
+[33m8e71c75[m fix: improve privacy policy page layout and styling (#522)
+[33mc95c30a[m feat: enhance TrimControl with accessible validation states and ARIA attributes (#543)
+[33m5e90619[m feat: warn user before closing tab during export or when download is ready (#629)
+[33m92a3658[m fix: add input validation for all EditRecipe fields before export (#484)
+[33m8dda402[m feat: show export progress percentage in browser tab title (#626)
+[33md262479[m fix: add security headers using vercel.json (#555)
+[33m6a709d5[m feat: add 4K/8K dimension safety limits with auto-downscale (#384)
+[33me1ea9f3[m fix: resolve blob URL memory leak and syntax errors (#387)
+[33m2744518[m fix: implement CORS validation when loading FFmpeg from CDN (#368)
+[33m5e25d51[m security: pin FFmpeg CDN version and add SRI integrity hashes (#377)
+[33m686b587[m feat: add real-time aspect ratio display for custom preset inputs (#473)
+[33m66952b0[m feat: add image overlay support for exported videos (#623)
+[33mfee5c1f[m fix: standardize Tailwind colors to use theme CSS variables in VideoEditor (#561)
+[33md657702[m fix: Export and Download Button not visible in the Light Mode #456 (#565)
+[33me4e46cf[m feat: premium drag and drop shimmer interaction and fix tailwind colors (#567)
+[33m445ef74[m fix: move Adjustments section outside Audio & Speed section in VideoEditor (#577)
+[33md2f191d[m feat: add responsive-modern-footer (#584)
+[33m1a8b8e7[m feat: add SRI verification for FFmpeg CDN resources (#624)
+[33maae933a[m feat: add high contrast accessibility theme (#603)
+[33m0a1d4a5[m fix: reset dragging state when file dropped outside upload zone (#614)
+[33m46d0b4e[m fix: add aria-hidden to SVG icons for screen reader accessibility (#445)
+[33mf7889f7[m feat: add 500mb max file size limit (#620)
+[33mfcc0f43[m feat: save export settings to localstorage (#621)
+[33mb7b4b66[m fix: improve upload card responsive layout (#622)
+[33m6e82516[m feat: export complete sound notification (#392)
+[33mb88f916[m feat: add preset search and filter (#114)
+[33m7dca818[m feat: implement interactive and responsive footer (#591)
+[33m14a6142[m chore(deps): bump actions/checkout from 4 to 6
+[33m02069a3[m chore(deps-dev): bump @types/node from 22.19.19 to 25.8.0
+[33m06aeb53[m chore(deps): bump oven-sh/setup-bun from 1 to 2
+[33m071edc9[m chore(deps): bump actions/github-script from 7 to 9
+[33mfa198c5[m chore(deps): bump actions/stale from 9 to 10
+[33m9316fe0[m fix: light mode button visibility by adding film colour palette
+[33mcf7b15d[m feat: add thumbnail strip for video frame navigation
+[33m3a09798[m refactor: eliminate duplicated default configurations and utility constants
+[33m8e602c2[m a11y: standardize minimum text scale to 14px to pass WCAG validation
+[33m71b77e8[m fix: footer adapts properly to light and dark themes
+[33me5737d3[m docs: add visual tech stack badges to README
+[33md8caaf2[m chore: add dependabot configuration
+[33md6daf03[m fix: show validation error for non-video uploads and improve error handling
+[33m1b84e7f[m security: override postcss to ^8.5.3 to patch CVE-2025-26923
+[33mf903bda[m docs: consolidate duplicated Vercel deployment sections in README
+[33mb278af6[m fix: show progress while FFmpeg engine downloads (#563)
+[33m2a4e49a[m refactor: add CSS variables for warning and error states (#587)
+[33mae961e3[m fix: revoke blob URL on result change and unmount, add metadata timeout guard (#585)
+[33mb38b059[m a11y: add aria-invalid, aria-label and label associations to form inputs (#574)
+[33m88c0651[m feat: add mobile-only scroll-to-top button (#532)
+[33m6e1b098[m test: add unit tests for formatBytes utility (#569)
+[33md1ac597[m docs: improve stats section in README (#572)
+[33m510dd71[m fix: add -b:v 0 flag to VP9 encoder for constant quality mode (#564)
+[33m9e77d3f[m feat: add Ctrl+O / Cmd+O keyboard shortcut to open file dialog (#566)
+[33m68c09f9[m test: add unit tests for getPresetById (#355)
+[33mafe7bc1[m fix: add aria-describedby to speed slider and quality control inputs (#364)
+[33m17a5e14[m feat: add letterbox/crop framing overlay to video preview (#550)
+[33m3b55afb[m feat: add estimated processing time to large file warning and enforce 2GB size limit (#531)
+[33m73f85fa[m feat: show video file type badge in file info bar (#533)
+[33ma63ffed[m fix: add inputMode="numeric" to width and height inputs for mobile (#534)
+[33m4347318[m feat: disable spellcheck on numeric inputs (#535)
+[33m16f4e59[m feat: scroll to export result on completion with reduced-motion support (#536)
+[33m1c139fd[m fix: consolidate DEFAULT_RECIPE and SPEED_STEPS to single source of truth (#539)
+[33mbb83199[m feat: add Space shortcut for video play/pause (#544)
+[33mb35b5e4[m feat: add confirmation dialog before resetting video (#549)
+[33mf7f2575[m fix: prevent speed tick labels overflow on narrow screens (#580)
+[33m0d605d2[m fix: add transformOrigin center to fix Safari SVG rotation rendering (#581)
+[33m6beda45[m feat: add video stabilization (deshake) filter option  (#317)
+[33m00cf70d[m docs: add JSDoc to formatBytes utility function in utils.ts
+[33m1cdb321[m docs: add JSDoc to cn utility function in utils.ts
+[33md4869f3[m style: use double quotes for imports in presets.test.ts
+[33m2464fbd[m style: remove trailing whitespace in ternary expression in ExportSettings
+[33mf2dc1df[m a11y: remove redundant role='main' from <main> element in layout
+[33m1bb564a[m style: remove extra space in skip-navigation anchor tag in layout
+[33md1aa15e[m fix: correct DEFAULT_RECIPE contrast and saturation defaults to 1 for FFmpeg eq filter
+[33m3da7f36[m style: use double quotes in verifyMagicBytes function in useVideoEditor
+[33mfc57f3f[m style: use double quotes in extractMetadata function in useVideoEditor
+[33m94c9930[m fix: add missing type='button' attribute to ThemeToggle button
+[33m76bb1e4[m style: remove extra blank line after useState declaration in VideoEditor
+[33md1fc87a[m style: use double quotes for string comparisons in aria-live div in VideoEditor
+[33mfae48fe[m fix: add missing type='button' to Retry Export button in VideoEditor
+[33m5acd5da[m fix: add missing type='button' to Copy error button in VideoEditor
+[33mfc9f174[m refactor: replace template literal with cn() in VideoPreview
+[33m755c8a7[m style: fix missing space after comma in import statement in PresetSelector
+[33ma1e6208[m style: fix spacing around modulo operator in customHeight check
+[33m1551332[m style: fix spacing around !== operator in customWidth check
+[33m99ee5ef[m fix: remove debug console.log from handleWidthChange in PresetSelector
+[33m3d49483[m fix: remove debug console.log from PresetSelector
+[33me00f723[m a11y: add aria-label to drop zone button in FileUpload
+[33mb61b78f[m style: fix indentation of Preview anchor closing tag in DownloadResult
+[33mb1fdf12[m fix: remove duplicate resolution display from DownloadResult header
+[33meaf4fd6[m fix: use × instead of x for resolution display in DownloadResult stat card
+[33m3551e22[m style: use double quotes for imports in AudioSpeedControl for consistency
+[33m5d14b18[m refactor: rename name to filename in handleFileSelect for clarity
+[33m2fddc9e[m style: remove redundant text-muted class shadowed by text-film-600 in ExportOverlay
+[33ma894cb3[m docs: add JSDoc to getPresetById in presets.ts
+[33m453d35e[m refactor: replace template literal className with cn() in FormatSelector
+[33m909265a[m style: use double quotes for import in constants.ts for consistency
+[33m7319c01[m style: fix indentation of eq filter push in buildVideoFilter
+[33me7b58fb[m docs: add JSDoc to buildAudioFilter in ffmpeg.ts
+[33mfe21cd0[m docs: add JSDoc to buildVideoFilter in ffmpeg.ts
+[33mc9f13f9[m docs: add JSDoc to buildSessionId in ffmpeg.ts
+[33m2067a30[m docs: add JSDoc to terminateFFmpeg in ffmpeg.ts
+[33m7a6f2d4[m docs: add JSDoc to formatBytes in ffmpeg.ts
+[33mb445f1c[m fix: improve FFmpeg load error message for clarity
+[33mbbb59b3[m style: reformat handleEnd one-liner to multiline in TrimControl
+[33m51ddd31[m style: add missing spaces before braces in TrimControl if-blocks
+[33mb1daffc[m style: fix spacing around = in useState declarations in TrimControl
+[33me92e687[m docs: fix YAML front matter parse error in CONTRIBUTING.md banner
+[33mc61cf6e[m docs: add community banner to top of CONTRIBUTING.md
+[33m09ab672[m chore: update issue template config with discussion links and star CTA
+[33m58bc39f[m fix: fixed audio filter chaining and add Vitest for unit testing (#440)
+[33m3ccf1fb[m fix: remove unrelated changes (#524)
+[33m7777eae[m Add Typescript typecheck Github Actions workflow (#366)
+[33m1d4a668[m docs(README): add contributors section with contributor graph link (#330)
+[33md3f1618[m docs: add Vercel deployment guide to README (#357)
+[33mf6e662c[m fix: add aria-live region for export status screen reader announcements (#348)
+[33m84d60e5[m docs: add MIT LICENSE, CODE_OF_CONDUCT, and CONTRIBUTING files (#313)
+[33m598750a[m docs: add GSSoC PR template for contributors (#312)
+[33m0c15c6f[m fix: show warning for odd width/height inputs in PresetSelector (#447)
+[33md9e248b[m fix: improve export error messages to be more actionable (#469)
+[33m8ebc7d3[m fix: add back navigation button to privacy policy page (#505)
+[33m0f28c65[m feat: add character count and validation to filename input (#513)
+[33mc5800d5[m fix: add contact page to prevent footer 404 (#516)
+[33mcd55f94[m feat: add reset to default button for audio and speed controls (#518)
+[33m70edc7a[m fix: remove duplicate footer copyright text from layout.tsx (#523)
+[33mfea6107[m fix: hide Star on GitHub button below 300px to prevent theme toggle overlap (#525)
+[33mc1cbc2c[m Updated (#320)
+[33md2f7c60[m fix: remove npm lockfile and use bun lockfile (#297)
+[33m5a0585f[m Fix/corrupted assignment bot (#503)
+[33m57d06a1[m feat: add descriptive tooltips to Fit/Fill framing buttons (#194) (#489)
+[33m60ad08b[m feat: add file size limit and warning for large video uploads (#475)
+[33m4c94b15[m docs: add bot-based issue assignment guide to CONTRIBUTING.md (#494)
+[33md9179ec[m ci: fix label automation — keyword bot + force Claude API calls (#492)
+[33m5d94bee[m fix: replace corrupted issue-assignment-bot.yml with clean version (#488)
+[33m0bb25d1[m Ci/issue assignment bot v2 (#487)
+[33mbb5b27d[m ci: replace AI-based issue bot with pure github-script implementation (#485)
+[33m0c0cb60[m ci: add issue assignment bot with auto-assign and inactivity checks
+[33mf6c16ec[m feat: improve footer with modern, responsive, and unified design (#468)
+[33madb4b93[m fix(ffmpeg): resolve vfs file collisions and lifecycle memory leaks (#412) (#466)
+[33m260803c[m feat: add 'What is CRF?' tooltip to quality slider (#193) (#470)
+[33m75d0514[m feat: add 'Copy error' button with 2s confirmation for export errors (#72) (#472)
+[33m0919eaa[m fix: move GitHub star button left to prevent overlap with theme toggle
+[33m113e133[m fix: prevent body scroll when ExportOverlay is active
+[33mc97714b[m chore: remove unused lottie-react dependency
+[33m6f57517[m chore: add prettier configuration for consistent code formatting
+[33m70c7624[m fix: resolve race condition and improve cleanup in VideoPreview
+[33m83284b3[m perf: add preconnect and dns-prefetch for jsdelivr CDN
+[33me50da65[m fix: revoke blob URLs to prevent memory leaks in video exports
+[33m90cbdf4[m fix: add opacity-40 to disabled export button state
+[33m7064766[m fix: correct useEffect dependency array in LottiePlayer
+[33mf28debe[m fix: prevent duplicate exports when export button pressed multiple times
+[33m5d812c0[m feat: keyboard-accessible preset categories and custom dimensions UX
+[33m3d3f859[m fix: truncate long filenames in upload UI
+[33m3883058[m feat: add sitemap.xml with correct production URL (#462)
+[33m2cc553e[m feat: warn when trim range excludes audio track (#460)
+[33m9b5f71f[m fix: remove duplicate Escape handler in ExportOverlay (#461)
+[33m8428e4f[m Update README.md (#459)
+[33m3ed9bcb[m feat: add output format selector (MP4, WebM, MKV) in export settings (#452)
+[33m67b2499[m feat: add feature request issue template (#43) (#451)
+[33m9ff7511[m Update TrimControl.tsx (#458)
+[33m1abccb3[m feat: add footer with copyright and github link (#62) (#453)
+[33mfdd3a37[m feat: add bug report issue template (#42) (#450)
+[33mf2b8710[m fix: configure Vercel 404 routing and add not-found page
+[33m54ecca4[m feat: extract video metadata (width, height, duration)
+[33m4f60833[m feat: add unit tests for getPresetById in presets.ts
+[33m3c4e9e4[m docs: improve CONTRIBUTING.md and add Code of Conduct for #40 (#449)
+[33mb1145a8[m chore: add id-token: write to claude-manager jobs + fix onCancel type error
+[33me959309[m fix: improve FFmpeg CDN error handling with typed FFmpegLoadError
+[33m937e611[m feat: add file size validation with 2GB hard limit and 500MB warning
+[33m75830cb[m feat: add cancel export button to export overlay
+[33m850b0bf[m docs: add CONTRIBUTING.md and update README
+[33m6a3bd25[m feat: add aria-label and aria-disabled to export button
+[33ma1874b8[m docs: add CODE_OF_CONDUCT.md
+[33m23d23f6[m feat: add reset all settings button
+[33m5b2ac56[m feat: close export overlay on Escape key
+[33mf46c0d6[m fix: improve aspect ratio text formatting in PresetSelector
+[33md44f86d[m fix: handle floating point precision in trim validation

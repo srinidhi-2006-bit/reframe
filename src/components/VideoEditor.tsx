@@ -197,15 +197,30 @@ export default function VideoEditor() {
               <FileUpload onFileSelect={handleFileSelect} currentFile={file} fileError={fileError} duration={duration} />
 
               {!file && (
+<<<<<<< HEAD
                 <div className="text-center text-[var(--muted)] py-6">
                   <p>Upload a video to get started</p>
                   <p className="text-sm">Supports MP4, MOV, WebM and more</p>
                 </div>
+=======
+              <div className="text-center text-[var(--muted)] py-6">
+                <p>Upload a video to get started</p>
+
+              </div>
+>>>>>>> 25996a2 (fix: render image overlay in live preview)
               )}
 
               {file && (
                 <div className="mt-4 animate-fade-in">
-                  <VideoPreview file={file} recipe={recipe} videoRef={videoRef} />
+                  <VideoPreview
+                    file={file}
+                    recipe={recipe}
+                    videoRef={videoRef}
+                    overlayFile={overlayFile}
+                    overlayPosition={overlayPosition}
+                    overlaySize={overlaySize}
+                    overlayOpacity={overlayOpacity}
+                  />
 
                   <div className="mt-3">
                     <ThumbnailStrip
@@ -237,7 +252,7 @@ export default function VideoEditor() {
                       recipe={recipe}
                       onChange={updateRecipe}
                       duration={duration}
-                      file={file} 
+                      file={file}
                     />
                   </Section>
                   <Section icon={<RotateCw size={12} />} title="Rotate" delay={100}>
