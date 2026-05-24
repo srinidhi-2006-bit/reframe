@@ -3,7 +3,9 @@
 import { useState, useCallback, useEffect, useRef, useMemo } from "react";
 import { EditRecipe, ExportResult, ExportStatus, MAX_FILE_SIZE, OverlayPosition, isValidRecipe } from "@/lib/types";
 import { DEFAULT_RECIPE, SPEED_STEPS } from "@/lib/constants";
-import { getPresetById } from "@/lib/presets";
+import {
+  getPresetById,
+} from "@/lib/presets";
 import { loadFFmpeg, exportVideo, terminateFFmpeg, FFmpegLoadError } from "@/lib/ffmpeg";
 import { suggestPreset } from "@/lib/presetSuggestion";
 
@@ -147,6 +149,7 @@ export function useVideoEditor() {
   const [overlayPosition, setOverlayPosition] = useState<OverlayPosition>("bottom-right");
   const [overlaySize, setOverlaySize] = useState(150);
   const [overlayOpacity, setOverlayOpacity] = useState(100);
+
 
  const updateRecipe = useCallback((patch: Partial<EditRecipe>) => {
   setRecipe((prev) => {
@@ -492,7 +495,7 @@ export function useVideoEditor() {
     window.addEventListener("beforeunload", handler);
     return () => window.removeEventListener("beforeunload", handler);
   }, [status]);
-  
+
   useEffect(() => {
     const handleKeydown = (e: KeyboardEvent) => {
       if (
@@ -545,12 +548,6 @@ export function useVideoEditor() {
     }
    },[result?.blobUrl])
 
-  useEffect(() => {
-    return () => {
-      terminateFFmpeg();
-    };
-  }, []);
-
   const resetSettings = useCallback(() => {
     setRecipe(DEFAULT_RECIPE);
     try {
@@ -592,6 +589,7 @@ export function useVideoEditor() {
   useEffect(() => {
     localStorage.setItem("soundOnCompletion", String(recipe.soundOnCompletion));
   }, [recipe.soundOnCompletion]);
+
   const seekTo = useCallback((time: number) => {
     if (videoRef.current) {
       videoRef.current.currentTime = time;
@@ -599,8 +597,8 @@ export function useVideoEditor() {
   }, []);
 
   const toggleSound = useCallback(() => {
-  updateRecipe({ soundOnCompletion: !recipe.soundOnCompletion });
-}, [recipe.soundOnCompletion, updateRecipe]);
+    updateRecipe({ soundOnCompletion: !recipe.soundOnCompletion });
+  }, [recipe.soundOnCompletion, updateRecipe]);
 
   return {
     file,
@@ -637,5 +635,6 @@ export function useVideoEditor() {
     setOverlayOpacity,
     recommendedPreset,
     toggleSound,
+
   };
 }
