@@ -274,7 +274,7 @@ export default function PresetSelector({
               htmlFor="custom-width"
               className="mb-1.5 block text-[10px] font-heading font-semibold uppercase tracking-wider text-[var(--muted)]"
             >
-              Width (px)
+              Width
             </label>
 
             <input
@@ -293,13 +293,22 @@ export default function PresetSelector({
               className="w-full rounded-md border border-[var(--border)] bg-[var(--bg)] px-3 py-2 text-sm"
             />
           </div>
+              onChange={(e) => handleWidthChange(Number(e.target.value))}
+              className="w-full min-w-20 rounded-md border border-[var(--border)] bg-[var(--bg)] px-3 py-2 text-sm font-heading transition-all focus:outline-none focus:ring-2 focus:ring-film-400 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+            />
+          </div>
 
+          <div className="flex h-full flex-col items-center justify-center">
+            <span className="font-heading text-sm font-medium text-[var(--muted)]">
+              ×
+            </span>
+          </div>
           <div className="flex-1">
             <label
               htmlFor="custom-height"
               className="mb-1.5 block text-[10px] font-heading font-semibold uppercase tracking-wider text-[var(--muted)]"
             >
-              Height (px)
+              Height
             </label>
 
             <input
@@ -316,6 +325,9 @@ export default function PresetSelector({
                 )
               }
               className="w-full rounded-md border border-[var(--border)] bg-[var(--bg)] px-3 py-2 text-sm"
+
+              onChange={(e) => handleHeightChange(Number(e.target.value))}
+              className="w-full min-w-20 rounded-md border border-[var(--border)] bg-[var(--bg)] px-3 py-2 text-sm font-heading transition-all focus:outline-none focus:ring-2 focus:ring-film-400 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
             />
           </div>
 
