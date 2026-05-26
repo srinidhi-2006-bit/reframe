@@ -30,9 +30,13 @@ export interface EditRecipe {
   format: "mp4" | "webm" | "mkv" | "gif";
   stabilization: boolean;
   denoise: boolean;
+  autoReframe: boolean;
+  trackingSensitivity: number;
   brightness: number;
   contrast: number;
   saturation: number;
+  cropX?: number;
+  cropY?: number;
   soundOnCompletion: boolean;
   textOverlays: TextOverlay[];
   version: number;

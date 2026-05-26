@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { useTheme } from "./ThemeProvider";
-import { useEffect, useState } from "react";
 
 export function ThemeToggle() {
   const { theme, toggleTheme } = useTheme();
@@ -27,7 +26,6 @@ export function ThemeToggle() {
   }
 
   const isDark = theme === "dark";
-  const [mounted, setMounted] = useState(false);
 
   return (
     <button
@@ -48,7 +46,7 @@ export function ThemeToggle() {
       "
     >
     {!mounted ? (
-        <div className="w-4 h-4" /> 
+        <div className="w-4 h-4" />
       ) : isDark ? (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4" aria-hidden="true">
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />

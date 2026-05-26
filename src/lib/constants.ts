@@ -20,6 +20,8 @@ export const DEFAULT_RECIPE: EditRecipe = {
   saturation: 1,
   stabilization: false,
   denoise: false,
+  autoReframe: false,
+  trackingSensitivity: 50,
   soundOnCompletion: false,
   normalizeAudio: false,
   textOverlays: [],

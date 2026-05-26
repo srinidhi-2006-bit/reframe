@@ -19,6 +19,7 @@ import DownloadResult from "./DownloadResult";
 import ImageOverlay from "./ImageOverlay"
 import { getPresetById } from "@/lib/presets";
 
+import { detectFaceCenter } from "@/hooks/useAutoReframe";
 import { cn } from "@/lib/utils";
 import {
   Layers, Crop, Scissors, RotateCw, Volume2, Type,
@@ -226,6 +227,7 @@ export default function VideoEditor() {
   const [copied, setCopied] = useState(false);
   const [shareCopied, setShareCopied] = useState(false);
   const [selectedTextId, setSelectedTextId] = useState<string | null>(null);
+  const [autoReframeEnabled, setAutoReframeEnabled] = useState(false);
   const [openSections, setOpenSections] = useState({
     resize: true,
     trim: false,
@@ -301,7 +303,26 @@ export default function VideoEditor() {
 
     return `Exporting to ${width}×${height} ${recipe.format.toUpperCase()} • ${framingLabel} • ${speedLabel} • Quality: ${qualityLabel}`;
   }, [recipe]);
+  useEffect(() => {
+    if (!autoReframeEnabled) return;
 
+    const interval = setInterval(async () => {
+      if (videoRef.current) {
+        const face = await detectFaceCenter(videoRef.current);
+
+        if (face) {
+          console.log("Detected face:", face);
+
+          updateRecipe({
+            cropX: face.x,
+            cropY: face.y,
+          });
+        }
+      }
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [autoReframeEnabled, updateRecipe, videoRef]);
   useEffect(() => {
     return () => {
       if (videoSrc) URL.revokeObjectURL(videoSrc);
@@ -357,7 +378,7 @@ export default function VideoEditor() {
       <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[var(--accent)] inline-block animate-pulse" />
       No login. No ads. 100% private.
     </div>
-  </div>  
+  </div>
   <div
     className="flex flex-wrap justify-center text-center items-center gap-2 text-sm font-heading font-semibold uppercase tracking-widest text-[var(--muted)] pb-1"
     style={{ justifyContent: 'center', textAlign: 'center', margin: '0', width: 'auto' }}
@@ -719,6 +740,17 @@ export default function VideoEditor() {
                 <div className="space-y-3">
                   <PresetSelector recipe={recipe} onChange={updateRecipe} />
                   <FramingControl recipe={recipe} onChange={updateRecipe} />
+                  <div className="flex items-center gap-2 mt-3">
+                    <input
+                      type="checkbox"
+                      checked={autoReframeEnabled}
+                      onChange={(e) => setAutoReframeEnabled(e.target.checked)}
+                    />
+
+                    <label className="text-sm text-[var(--muted)]">
+                      AI Auto Reframe
+                    </label>
+                  </div>
                 </div>
               </AccordionSection>
 
